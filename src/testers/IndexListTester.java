@@ -37,6 +37,7 @@ public class IndexListTester {
 		
 		showList(list); 
 
+		list.toArray();
 
 		showListAfterDeleting(list, 4); 
 		showListAfterDeleting(list, 2); 

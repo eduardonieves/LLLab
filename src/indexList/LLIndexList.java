@@ -16,7 +16,7 @@ public class LLIndexList<E> implements IndexList<E> {
 
 	/**
 		Determines the size of the list. 
-		@return size of the list – number of elements. 
+		@return size of the list ï¿½ number of elements. 
 	 **/
 	public int size() { 
 		return internalLL.length(); 
@@ -57,7 +57,7 @@ public class LLIndexList<E> implements IndexList<E> {
 		@param e the new element to insert. 
 		@throws IndexOutOfBoundsException if the index
 			i does not corresponds to the index 
-			of a valid position to insert…
+			of a valid position to insertï¿½
 	 **/ 
 	public void add(int index, E e) 
 	throws IndexOutOfBoundsException 
@@ -119,6 +119,17 @@ public class LLIndexList<E> implements IndexList<E> {
 		E etr = ntc.getElement(); 
 		ntc.setElement(e); 
 		return etr; 
+	}
+	
+	public Object[] toArray() {
+			
+		Object arr[] = new Object [this.size()];
+
+		for(int i = 0; i < this.size(); i++){
+			arr[i] = this.getDataNodeAtPosition(i).getElement();
+		}
+		
+		return arr;
 	}
 	
 
